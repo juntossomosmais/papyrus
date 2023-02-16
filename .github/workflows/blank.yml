@@ -30,6 +30,8 @@ jobs:
   s3Backup:
     runs-on: ubuntu-latest
     steps:
+      - name: runtest
+        run: echo ${{ env.AWS_REGION }}
       - uses: actions/checkout@v3
       - name: S3 Backup
         uses: peter-evans/s3-backup@v1.1.1
@@ -40,3 +42,4 @@ jobs:
           MIRROR_TARGET: bkpgithub
         with:
           args: --overwrite --remove
+        
