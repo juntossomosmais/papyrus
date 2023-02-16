@@ -37,5 +37,3 @@ jobs:
           ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
           SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
           MIRROR_TARGET: bkpgithub
-        with:
-          args: --overwrite --remove
